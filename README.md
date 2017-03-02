@@ -1,10 +1,8 @@
 # Object Relations Assessment
 
-For this assignment, we'll be working with a Yelp-style domain. We have three models - Restaurant, Customer, and Review.
-For our purposes, a Restaurant has many reviews, a Customer has many reviews, and Restaurant - Customer is a many to many relationship.
+For this assignment, we'll be building out Netflix! A viewer has left many ratings on movies, and a movie has been rated by many views.
 
-If you are not sketching out your domain, and thinking about single source of truth,
-you are doing it wrong :(
+As always, make sure to sketch out your domain and think about the single source of truth for your data.
 
 ## Topics
 
@@ -20,38 +18,38 @@ Your goal is to build out all of the methods listed in the deliverables. Do your
 
 We've provided you with a console that you can use to test your code. To enter a console session, run `ruby tools/console.rb`. You'll be able to test out the methods that you write here.
 
-**To Submit** - once you've completed all the deliverables, please copy/paste your three class definitions into the `solution.rb`  file. Please don't submit the lab until we give you the signal. 
+**To Submit** - once you've completed all the deliverables, please copy/paste your three class definitions into the `solution.rb`  file. Please don't submit the lab until we give you the signal.
 
 ## Deliverables
 
-Build the following methods on the customer class
-+ Customer.all
-  + should return all of the customers
-+ Customer.find_by_name(name)
+Build the following methods on the viewer class
++ Viewer.all
+  + should return all of the viewers
++ Viewer.find_by_name(name)
   + given a string of a full name, returns the first customer whose full name matches
-+ Customer.find_all_by_first_name(name)
++ Viewer.find_all_by_first_name(name)
   + given a string of a first name, returns an array containing all customers with that first name
-+ Customer.all_names
-  + should return an array of all of the customer full names
-+ Customer#add_review
-  + given some content and a restaurant, creates a new review and associates it with that customer and that restaurant
++ Viewer.all_names
+  + should return an array of all of the viewer full names
++ Viewer#create_rating
+  + given a score and a movie, creates a new Rating and associates it with that viewer and that movie
 
-Build out the following methods on the Review class
+Build out the following methods on the Rating class
 
-+ Review.all
-  + returns all of the reviews
-+ Review#customer
-  + returns the customer for that given review
-+ Review#restaurant
-  + returns the restaurant for that given review
++ Rating.all
+  + returns all of the ratings
++ Rating#viewer
+  + returns the viewer for that given rating
++ Rating#movie
+  + returns the movie for that given rating
 
-Build out the following methods on the restaurant class
+Build out the following methods on the movie class
 
-+ Restaurant.all
-  + returns an array of all restaurants
-+ Restaurant.find_by_name(name)
-  + given a string of restaurant name, returns the first restaurant that matches
-+ Restaurant#reviews
-  + returns an array of all reviews for that restaurant
-+ Restaurant#customers
-  + should return all of the customers who have written reviews of that restaurant.
++ Movie.all
+  + returns an array of all movies
++ Movie.find_by_title(title)
+  + given a string of movie title, returns the first movie that matches
++ Movie#ratings
+  + returns an array of all ratings for that movie
++ Movie#viewers
+  + should return all of the customers who have left ratings for that movie.
