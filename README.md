@@ -27,10 +27,6 @@ Build the following methods on the viewer class
   + should return all of the viewers
 + Viewer.find_by_name(name)
   + given a string of a full name, returns the first customer whose full name matches
-+ Viewer.find_all_by_first_name(name)
-  + given a string of a first name, returns an array containing all customers with that first name
-+ Viewer.all_names
-  + should return an array of all of the viewer full names
 + Viewer#create_rating
   + given a score and a movie, creates a new Rating and associates it with that viewer and that movie
 
@@ -53,3 +49,5 @@ Build out the following methods on the movie class
   + returns an array of all ratings for that movie
 + Movie#viewers
   + should return all of the viewers who have left ratings for that movie.
++ Movie#average_rating
+  + should return the average of all of the scores for the ratings of that particular movie.
